@@ -1,26 +1,65 @@
-[gd_scene load_steps=4 format=3 uid="uid://bhdgrf1kpsvtm"]
+[gd_scene load_steps=7 format=3 uid="uid://dggrjsx1gsof1"]
 
+[ext_resource type="Texture2D" uid="uid://ki55pkf8gijc" path="res://Assets/Background Idea.jpeg" id="1_sj51x"]
 [ext_resource type="Texture2D" uid="uid://bly82jmh7xipu" path="res://Assets/Screenshot 2023-10-26 211512.png" id="2_ky3rb"]
 [ext_resource type="PackedScene" uid="uid://oib5srartppw" path="res://scenes/player.tscn" id="2_ty6d1"]
+[ext_resource type="Texture2D" uid="uid://d2e1cfwx20tis" path="res://Assets/Bricks_Flooring.png" id="3_vd5rw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8kg7n"]
-size = Vector2(2290.25, 204.724)
+size = Vector2(2290.25, 219.862)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_s1a1s"]
+size = Vector2(58.0811, 30.9941)
 
 [node name="Node2D" type="Node2D"]
 scale = Vector2(0.840957, 0.996464)
+
+[node name="GameBackground" type="Sprite2D" parent="."]
+position = Vector2(1146.31, 497.76)
+scale = Vector2(8.03019, 6.18431)
+texture = ExtResource("1_sj51x")
+offset = Vector2(-1.1076, 8.38468)
 
 [node name="Player" parent="." instance=ExtResource("2_ty6d1")]
 position = Vector2(91.5624, 203.72)
 scale = Vector2(0.5, 0.419719)
 
 [node name="floor" type="CharacterBody2D" parent="."]
+position = Vector2(-8.32385, 10.0355)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="floor"]
 position = Vector2(1147.5, 974.446)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_8kg7n")
 
-[node name="Screenshot2023-10-26211512" type="Sprite2D" parent="."]
+[node name="Screenshot2023-10-26211512" type="Sprite2D" parent="floor"]
 position = Vector2(1149.88, 971.435)
-scale = Vector2(4.96329, 3.10473)
+scale = Vector2(4.96329, 3.30544)
 texture = ExtResource("2_ky3rb")
+
+[node name="obstacle" type="CharacterBody2D" parent="."]
+position = Vector2(1415.05, 385.363)
+scale = Vector2(0.113151, 0.274032)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="obstacle"]
+position = Vector2(1972.54, 1173.72)
+scale = Vector2(63.6296, 18.3143)
+shape = SubResource("RectangleShape2D_s1a1s")
+
+[node name="Screenshot2023-10-26211513" type="Sprite2D" parent="obstacle"]
+position = Vector2(2028.28, 1171.89)
+scale = Vector2(-7.82902, 3.48687)
+texture = ExtResource("3_vd5rw")
+
+[node name="obstacle2" type="CharacterBody2D" parent="."]
+position = Vector2(561.265, 175.621)
+scale = Vector2(0.158916, 0.268378)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="obstacle2"]
+position = Vector2(1972.54, 1173.72)
+scale = Vector2(63.6296, 18.3143)
+shape = SubResource("RectangleShape2D_s1a1s")
+
+[node name="Screenshot2023-10-26211513" type="Sprite2D" parent="obstacle2"]
+position = Vector2(2028.28, 1171.89)
+scale = Vector2(-7.82902, 3.48687)
+texture = ExtResource("3_vd5rw")

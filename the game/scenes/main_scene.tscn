@@ -8,14 +8,17 @@ size = Vector2(1925, 251)
 
 [node name="Node2D" type="Node2D"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(955, 948)
-shape = SubResource("RectangleShape2D_8kg7n")
+[node name="Player" parent="." instance=ExtResource("2_ty6d1")]
+position = Vector2(127, 163)
+scale = Vector2(0.5, 0.5)
 
-[node name="Icon" type="Sprite2D" parent="."]
+[node name="floor" type="CharacterBody2D" parent="."]
+
+[node name="Icon" type="Sprite2D" parent="floor"]
 position = Vector2(959.5, 964.5)
 scale = Vector2(14.9766, 2.30469)
 texture = ExtResource("1_e4bb6")
 
-[node name="Player" parent="." instance=ExtResource("2_ty6d1")]
-position = Vector2(150, 139)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="floor"]
+position = Vector2(955, 948)
+shape = SubResource("RectangleShape2D_8kg7n")

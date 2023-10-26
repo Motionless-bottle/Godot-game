@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://bhdgrf1kpsvtm"]
 
-[ext_resource type="Texture2D" uid="uid://dma7cct8vgb8w" path="res://icon.svg" id="1_e4bb6"]
+[ext_resource type="Texture2D" uid="uid://d2e1cfwx20tis" path="res://Assets/Bricks_Flooring.png" id="2_cnhe4"]
 [ext_resource type="PackedScene" uid="uid://oib5srartppw" path="res://scenes/player.tscn" id="2_ty6d1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8kg7n"]
@@ -14,11 +14,26 @@ scale = Vector2(0.5, 0.5)
 
 [node name="floor" type="CharacterBody2D" parent="."]
 
-[node name="Icon" type="Sprite2D" parent="floor"]
-position = Vector2(959.5, 964.5)
-scale = Vector2(14.9766, 2.30469)
-texture = ExtResource("1_e4bb6")
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="floor"]
-position = Vector2(955, 948)
+position = Vector2(958, 945)
 shape = SubResource("RectangleShape2D_8kg7n")
+
+[node name="Screenshot2023-10-26172550" type="Sprite2D" parent="."]
+position = Vector2(328.5, 945)
+scale = Vector2(1.35073, 1.51852)
+texture = ExtResource("2_cnhe4")
+
+[node name="Screenshot2023-10-26172550" type="Sprite2D" parent="Screenshot2023-10-26172550"]
+position = Vector2(316.5, 945)
+scale = Vector2(1.30063, 1.51852)
+texture = ExtResource("2_cnhe4")
+
+[node name="Screenshot2023-10-26172551" type="Sprite2D" parent="."]
+position = Vector2(954.5, 943.5)
+scale = Vector2(1.37578, 1.5)
+texture = ExtResource("2_cnhe4")
+
+[node name="Screenshot2023-10-26172552" type="Sprite2D" parent="."]
+position = Vector2(1567, 943.5)
+scale = Vector2(1.46973, 1.5)
+texture = ExtResource("2_cnhe4")

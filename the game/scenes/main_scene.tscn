@@ -1,39 +1,26 @@
 [gd_scene load_steps=4 format=3 uid="uid://bhdgrf1kpsvtm"]
 
-[ext_resource type="Texture2D" uid="uid://d2e1cfwx20tis" path="res://Assets/Bricks_Flooring.png" id="2_cnhe4"]
+[ext_resource type="Texture2D" uid="uid://bly82jmh7xipu" path="res://Assets/Screenshot 2023-10-26 211512.png" id="2_ky3rb"]
 [ext_resource type="PackedScene" uid="uid://oib5srartppw" path="res://scenes/player.tscn" id="2_ty6d1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8kg7n"]
-size = Vector2(1925, 251)
+size = Vector2(2290.25, 204.724)
 
 [node name="Node2D" type="Node2D"]
+scale = Vector2(0.840957, 0.996464)
 
 [node name="Player" parent="." instance=ExtResource("2_ty6d1")]
-position = Vector2(127, 163)
-scale = Vector2(0.5, 0.5)
+position = Vector2(91.5624, 203.72)
+scale = Vector2(0.5, 0.419719)
 
 [node name="floor" type="CharacterBody2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="floor"]
-position = Vector2(958, 945)
+position = Vector2(1147.5, 974.446)
+scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_8kg7n")
 
-[node name="Screenshot2023-10-26172550" type="Sprite2D" parent="."]
-position = Vector2(328.5, 945)
-scale = Vector2(1.35073, 1.51852)
-texture = ExtResource("2_cnhe4")
-
-[node name="Screenshot2023-10-26172550" type="Sprite2D" parent="Screenshot2023-10-26172550"]
-position = Vector2(316.5, 945)
-scale = Vector2(1.30063, 1.51852)
-texture = ExtResource("2_cnhe4")
-
-[node name="Screenshot2023-10-26172551" type="Sprite2D" parent="."]
-position = Vector2(954.5, 943.5)
-scale = Vector2(1.37578, 1.5)
-texture = ExtResource("2_cnhe4")
-
-[node name="Screenshot2023-10-26172552" type="Sprite2D" parent="."]
-position = Vector2(1567, 943.5)
-scale = Vector2(1.46973, 1.5)
-texture = ExtResource("2_cnhe4")
+[node name="Screenshot2023-10-26211512" type="Sprite2D" parent="."]
+position = Vector2(1149.88, 971.435)
+scale = Vector2(4.96329, 3.10473)
+texture = ExtResource("2_ky3rb")

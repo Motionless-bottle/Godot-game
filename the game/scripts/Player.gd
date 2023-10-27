@@ -9,6 +9,7 @@ var gravity = 980
 
 
 func _physics_process(delta):
+	print(velocity)
 	# Add the gravity.
 	if not is_on_floor():
 		velocity.y += gravity * delta
@@ -18,7 +19,7 @@ func _physics_process(delta):
 		velocity.y = JUMP_VELOCITY
 
 	if velocity.y < 0:
-		gravity = gravity * 1.2
+		gravity = gravity * 1.1
 		
 	if is_on_floor():
 		gravity = 980
